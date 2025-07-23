@@ -64,7 +64,8 @@ from ballsdex.core.models import (
 # 6. Step 3-5 is repeated until the boss' HP runs out, but you can end early with Step 7.
 # 7. /boss admin conclude ends the boss battle and rewards the winner, but you can choose to have *no* winner (ADMIN ONLY)
 
-MYTHICAL BUFFS = [2500, 2500]
+MYTHICALBUFFS = [2500, 2500] # Mythical Buffs
+# ATK, HP
 SHINYBUFFS = [1000,1000] # Shiny Buffs
 # ATK, HP
 MAXSTATS = [5000,5000] # Max stats a card is limited to (before buffs)
