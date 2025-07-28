@@ -68,7 +68,7 @@ MYTHICALBUFFS = [2500, 2500] # Mythical Buffs
 # ATK, HP
 SHINYBUFFS = [1000,1000] # Shiny Buffs
 # ATK, HP
-MAXSTATS = [5000,5000] # Max stats a card is limited to (before buffs)
+MAXSTATS = [5000,7000] # Max stats a card is limited to (before buffs)
 # ATK, HP
 DAMAGERNG = [0,2000] # Damage a boss can deal IF attack_amount has NOT been inputted in /boss admin attack.
 # Min Damage, Max Damage
@@ -467,6 +467,10 @@ class Boss(commands.GroupCog):
             messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{SHINYBUFFS[0]} ATK and {ballhealth}+{SHINYBUFFS[1]} HP"
             ballhealth += SHINYBUFFS[1]
             ballattack += SHINYBUFFS[0]
+        if "🌌" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{MYTHICALBUFFS[0]} ATK and {ballhealth}+{MYTHICALBUFFS[1]} HP"
+            ballhealth += MYTHICALBUFFS[1]
+            ballattack += MYTHICALBUFFS[0]
         else:
             pass
 
