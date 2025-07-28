@@ -64,9 +64,15 @@ from ballsdex.core.models import (
 # 6. Step 3-5 is repeated until the boss' HP runs out, but you can end early with Step 7.
 # 7. /boss admin conclude ends the boss battle and rewards the winner, but you can choose to have *no* winner (ADMIN ONLY)
 
-MYTHICALBUFFS = [2500, 2500] # Mythical Buffs
+BOSSBUFFS = [5000,5000] # Boss Buffs
+# ATK, HP
+MYTHICALBUFFS = [2500,2500] # Mythical Buffs
+# ATK, HP
+COLLECTORBUFFS = [2000,2000] # Collector Buffs
 # ATK, HP
 SHINYBUFFS = [1000,1000] # Shiny Buffs
+# ATK, HP
+SEASONALBUFFS = [250,250] # Shiny Buffs
 # ATK, HP
 MAXSTATS = [5000,7000] # Max stats a card is limited to (before buffs)
 # ATK, HP
@@ -471,6 +477,10 @@ class Boss(commands.GroupCog):
             messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{MYTHICALBUFFS[0]} ATK and {ballhealth}+{MYTHICALBUFFS[1]} HP"
             ballhealth += MYTHICALBUFFS[1]
             ballattack += MYTHICALBUFFS[0]
+        if "⚔️" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{BOSSBUFFS[0]} ATK and {ballhealth}+{BOSSBUFFS[1]} HP"
+            ballhealth += BOSSBUFFS[1]
+            ballattack += BOSSBUFFS[0]
         else:
             pass
 
