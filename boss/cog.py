@@ -486,6 +486,11 @@ class Boss(commands.GroupCog):
             messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{SEASONALBUFFS[0]} ATK and {ballhealth}+{SEASONALBUFFS[1]} HP"
             ballhealth += SEASONALBUFFS[1]
             ballattack += SEASONALBUFFS[0]
+     emojis = ["🏆","💎","❇️"] 
+       if any(e in messageforuser for e in emojis):
+           messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{COLLECTORBUFFS[0]} ATK and {ballhealth}+{COLLECTORBUFFS[1]} HP"
+           ballhealth += COLLECTERBUFFS[1]
+           ballattack += COLLECTORBUFFS[0]
 
         else:
             pass
