@@ -64,6 +64,8 @@ from ballsdex.core.models import (
 # 6. Step 3-5 is repeated until the boss' HP runs out, but you can end early with Step 7.
 # 7. /boss admin conclude ends the boss battle and rewards the winner, but you can choose to have *no* winner (ADMIN ONLY)
 
+METEORBUFFS = [3000,3000] # Galaxy Buffs
+# ATK, HP
 BOSSBUFFS = [5000,5000] # Boss Buffs
 # ATK, HP
 MYTHICALBUFFS = [2500,2500] # Mythical Buffs
