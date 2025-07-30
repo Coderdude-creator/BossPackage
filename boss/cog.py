@@ -479,6 +479,10 @@ class Boss(commands.GroupCog):
             messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{MYTHICALBUFFS[0]} ATK and {ballhealth}+{MYTHICALBUFFS[1]} HP"
             ballhealth += MYTHICALBUFFS[1]
             ballattack += MYTHICALBUFFS[0]
+        if "☄️" in messageforuser:
+            messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{METEORBUFFS[0]} ATK and {ballhealth}+{METEORBUFFS[1]} HP"
+            ballhealth += METOERBUFFS[1]
+            ballattack += METEORBUFFS[0]
         if "⚔️" in messageforuser:
             messageforuser = f"{ball.description(short=True, include_emoji=True, bot=self.bot)} has been selected for this round, with {ballattack}+{BOSSBUFFS[0]} ATK and {ballhealth}+{BOSSBUFFS[1]} HP"
             ballhealth += BOSSBUFFS[1]
